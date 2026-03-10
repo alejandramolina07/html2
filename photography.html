@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="photography.html">Photography</a>
+        <a href="design.html">Design</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>My Photography</h1>
+        <div class="slideshow-container">
+            <img class="mySlides" src="amaya.jpg" style="width:100%">
+            <img class="mySlides" src="12.jpg" style="width:100%">
+            <img class="mySlides" src="honeys.jpg" style="width:100%">
+            <img class="mySlides" src="pris.jpg" style="width:100%">
+            <img class="mySlides" src="yup.jpg" style="width:100%">
+            <img class="mySlides" src="linh.jpg" style="width:100%">
+            <img class="mySlides" src="volley.jpg" style="width:100%">
+            <img class="mySlides" src="16.jpg" style="width:100%">
+            <img class="mySlides" src="tony.jpg" style="width:100%">
+            <img class="mySlides" src="17.jpg" style="width:100%">
+        </div>
+    </main>
+
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        showSlides();
+    </script>
+</body>
+</html>
